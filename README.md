@@ -1,2 +1,3 @@
 # SQLQuikView
-https://www.npmjs.com/package/split-pane-react
+For split pane https://www.npmjs.com/package/split-pane-react
+For papaparse https://www.npmjs.com/package/papaparse
