@@ -1,32 +1,47 @@
 .open-tabs{
     width: 100%;
-    background-color: bisque;
+    background-color: #1e1e1e;
     position: absolute;
     top: 0;
     display: flex;
     justify-content: end;
     flex-flow: row-reverse;
-
 }
 
 .single-tab-container{
     display: flex;
+    padding-inline: 20px;
+    border-left: 1px solid #3e3e42;
+    color: #feed30;
+    cursor: pointer;
 }
 .tab{
     display: flex;
 }
 
 .single-active-tab-container{
-    padding-inline: 4px;
-    background-color: darkgrey; 
+    padding-left: 20px;
+    padding-right: 8px;
+    background-color: #252526;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%; 
+    border-top: 2px solid #007aac;
+    border-left: 1px solid #3e3e42;
+    color: #feed30;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .cancel-btn{
-    margin-left: 4px;
+    margin-left: 20px;
     cursor: pointer;
+    color: white;
+    display: none;
+}
+.active-cancel-btn{
+    margin-left: 20px;
+    cursor: pointer;
+    color: white;
 }
 

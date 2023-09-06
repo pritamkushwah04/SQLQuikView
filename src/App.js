@@ -21,14 +21,14 @@ function App() {
   return (
     <div className='App'>
       <Navbar tables={tables} setTables={setTables} activeTab={activeTab} setActiveTab={setActiveTab}/>
-      <div style={{ height: 550 }}>
+      <div style={{ height:'95vh'}}>
         <SplitPane
           split='horizontal'
           sizes={sizes}
           onChange={setSizes}
         >
           <Pane minSize={50} maxSize='100%'>
-            <div style={{ ...layoutCSS, background: 'white' }}>
+            <div style={{ ...layoutCSS, background: '#252526' }}>
               <DisplayContainer tables={tables} setTables={setTables} activeTab={activeTab} setActiveTab={setActiveTab}/>
             </div>
           </Pane >

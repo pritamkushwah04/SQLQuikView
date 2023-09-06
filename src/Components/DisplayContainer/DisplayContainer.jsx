@@ -1,6 +1,6 @@
 import React from 'react'
 import './DisplayContainer.css'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 import TableComponent from '../TableComponent/TableComponent'
 import OpenTabs from '../OpenTabs/OpenTabs'

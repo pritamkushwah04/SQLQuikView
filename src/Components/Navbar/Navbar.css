@@ -1,15 +1,35 @@
 nav{
-    background-color: wheat;
+    background-color: #1e1e1e;
+    color: rgb(133, 127, 127);
+    font-size: small;
+    padding: 4px;
     display: flex;
+    border-bottom: 1px solid #3e3e42;
+}
+.nav-item{
+    border-radius: 5%;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.nav-item:hover{
+    background-color: #2d2d30;
 }
 .all-table-list{
-    background-color: black;
+    background-color: #2d2d30;
     color: white;
     display: none;    
-    padding: 4px;
     margin-top: 10px;
+    border: 1px solid #3e3e42;
     position: absolute;
     top: 20px;
-    left: 0;
+    left: 20;
     z-index: 1;
+}
+.open-table-items{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+        
 }

@@ -4,12 +4,10 @@ const OpenTabs = (props) => {
 
     useEffect(() => {
         props.tables.forEach(function (tableName) {
-            console.log(tableName);
             if (tableName === props.activeTab) {
                 const table = document.getElementById(tableName);
                 table.style.display = 'block';
             } else {
-                console.log("opentabs useeffect called");
                 const table = document.getElementById(tableName);
                 table.style.display = 'none';
             }
@@ -27,17 +25,12 @@ const OpenTabs = (props) => {
            const divText = ele.target.parentNode.innerText.trim();
            const parts = divText.split('\n');
            const tabToClose= parts[0];
-           console.log("this tab will be closed");
-           console.log(tabToClose);
-           if(tabToClose===props.activeTab){
-              props.setActiveTab(props.tables[0]);
-           }
            props.setTables((curTables)=>curTables.filter(table=>table !== tabToClose));
-    }
-    console.log(props.tables);
-
-
-
+           if(tabToClose===props.activeTab && props.tables.length){
+            props.tables[0]===props.activeTab?props.setActiveTab(props.tables[1]):props.setActiveTab(props.tables[0])
+           }
+        }
+    
     return (
         <div className='open-tabs' >
             {
@@ -45,7 +38,7 @@ const OpenTabs = (props) => {
                     if (props.activeTab === tableName) {
                         return <div className='single-active-tab-container'>
                             <div onClick={activateTab} className='active-tab'>{tableName}</div>
-                            <div onClick={closeTab} className='cancel-btn'>X</div>
+                            <div onClick={closeTab} className='active-cancel-btn'>X</div>
                         </div>
 
                     } else {

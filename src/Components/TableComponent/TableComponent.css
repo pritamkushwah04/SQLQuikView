@@ -2,12 +2,16 @@
     max-height: 100%;
     overflow-y: auto;
     overflow-x: auto;
+    background-color: #252526;
 }
 
 
 th{
-  background-color: darkgrey;  
+  /* background-color: darkgrey;   */
   padding-top: 28px;
+  color: #007acc;
+  font-size: small;
+  font-weight:normal;
 }
 
 table,th,td{
@@ -17,14 +21,15 @@ table,th,td{
 
 td{
     text-align: center;
+    color:darkgray;
 }
 
 tr:nth-child(odd) {
-    background-color: #f2f2f2; /* Background color for odd rows */
+    /* background-color: #f2f2f2; */
 }
   
 tr:nth-child(even) {
-    background-color: #ffffff; /* Background color for even rows */
+    background-color: #2d2d30;; 
 }
   
   
