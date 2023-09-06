@@ -1,0 +1,8 @@
+.display-container{
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: absolute;
+    left: 0;
+}
+

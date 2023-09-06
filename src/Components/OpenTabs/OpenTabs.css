@@ -1,0 +1,32 @@
+.open-tabs{
+    width: 100%;
+    background-color: bisque;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: end;
+    flex-flow: row-reverse;
+
+}
+
+.single-tab-container{
+    display: flex;
+}
+.tab{
+    display: flex;
+}
+
+.single-active-tab-container{
+    padding-inline: 4px;
+    background-color: darkgrey; 
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-btn{
+    margin-left: 4px;
+    cursor: pointer;
+}
+
