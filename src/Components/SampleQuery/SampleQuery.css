@@ -1,0 +1,18 @@
+.query{
+    padding: 6px;
+    border-radius: 2%;
+    font-size: small;
+}
+
+.query:hover{
+    background-color: #2d2d30;;
+}
+
+.query-code{
+    display: none;
+    cursor: pointer;
+}
+
+.query:hover .query-code{
+    display: block;
+}

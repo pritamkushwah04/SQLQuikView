@@ -1,14 +1,14 @@
 nav{
+    width: 60px;
     background-color: #1e1e1e;
     color: rgb(133, 127, 127);
     font-size: small;
-    padding: 4px;
-    display: flex;
-    border-bottom: 1px solid #3e3e42;
+    padding: 2px;
+    border-right: 1px solid #3e3e42;
 }
 .nav-item{
     border-radius: 5%;
-    padding: 2px;
+    padding: 6px;
     cursor: pointer;
 }
 

@@ -4,14 +4,14 @@ import './DisplayContainer.css'
 
 import TableComponent from '../TableComponent/TableComponent'
 import OpenTabs from '../OpenTabs/OpenTabs'
-const DisplayContainer = (props) => {
+const DisplayContainer = ({tables,setTables,activeTab,setActiveTab}) => {
   return (
     <>
      <div className='display-container'>
-        <OpenTabs tables={props.tables} setTables={props.setTables} activeTab={props.activeTab} setActiveTab={props.setActiveTab} />
+        <OpenTabs tables={tables} setTables={setTables} activeTab={activeTab} setActiveTab={setActiveTab} />
         <div className='tables'>
           {
-            props.tables.map((tableName) => {
+            tables.map((tableName) => {
               return <TableComponent tableName={tableName} />
             })
           }
