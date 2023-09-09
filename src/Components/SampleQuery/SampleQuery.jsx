@@ -25,6 +25,7 @@ const SampleQuery = ({ setSelectedQuery, recentQuery, ActivityBarItem, setTables
     } else {
       setDynamicDiv(<TableSchema setTables={setTables} setActiveTab={setActiveTab}></TableSchema>)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recentQuery])
 
   function addToSelectedQuery(ele) {

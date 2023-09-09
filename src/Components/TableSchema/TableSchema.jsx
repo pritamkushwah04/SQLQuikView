@@ -22,7 +22,7 @@ const TableSchema = ({ setTables, setActiveTab }) => {
             }
             return prevList;
         });
-       setActiveTab(selectedTable);
+        setActiveTab(selectedTable);
     }
 
     useEffect(() => {
@@ -43,8 +43,8 @@ const TableSchema = ({ setTables, setActiveTab }) => {
                 setCsvData(rows)
             }
             getData(csvData);
-
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedTable])
 
     useEffect(() => {
@@ -79,6 +79,7 @@ const TableSchema = ({ setTables, setActiveTab }) => {
                 <div></div>
             )
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [csvData])
 
     return (

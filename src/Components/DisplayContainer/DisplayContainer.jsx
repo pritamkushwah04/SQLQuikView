@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './DisplayContainer.css'
 
 import TableComponent from '../TableComponent/TableComponent'
