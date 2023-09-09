@@ -15,10 +15,7 @@ const SideBar = ({ tables, setTables, activeTab, setActiveTab,selectedQuery,setS
         }
     }, [curActivityBarItem]);
 
-
-
     return (
-        <>
             <div className='side-bar'>
                 <Navbar curActivityBarItem={curActivityBarItem} setCurActivityBarItem={setCurActivityBarItem} tables={tables} setTables={setTables} activeTab={activeTab} setActiveTab={setActiveTab} />
                 <div id="activity-bar" className="activity-bar">
@@ -32,12 +29,13 @@ const SideBar = ({ tables, setTables, activeTab, setActiveTab,selectedQuery,setS
                                 setSelectedQuery={setSelectedQuery}
                                 recentQuery={recentQuery} 
                                 setRecentQuery={setRecentQuery}
+                                setTables={setTables}
+                                setActiveTab={setActiveTab}
                                 ></ActivityBarItemContainer>
                         })
                     }
                 </div>
             </div>
-        </>
     )
 }
 

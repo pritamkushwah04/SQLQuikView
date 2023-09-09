@@ -1,8 +1,8 @@
 nav{
     width: 60px;
-    background-color: #1e1e1e;
-    color: rgb(133, 127, 127);
-    font-size: small;
+    background-color: var(--bg-p-dark);
+    color: var(--text-p-dark);
+    font-size: normal;
     padding: 2px;
     border-right: 1px solid #3e3e42;
 }
@@ -13,7 +13,7 @@ nav{
 }
 
 .nav-item:hover{
-    background-color: #2d2d30;
+    background-color: var(--bg-hover-dark);
 }
 .all-table-list{
     background-color: #2d2d30;

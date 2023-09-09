@@ -1,12 +1,13 @@
 .side-bar{
     display: flex;
     height: 100vh;
+    position: relative;
 }
 
 .activity-bar{
     width: 250px;
     overflow-y: scroll;
-    background-color: #1e1e1e;
+    background-color: var(--bg-p-dark);
 }
 
 /* Hide the scrollbar */
@@ -25,3 +26,4 @@
     background-color: #888;
     
 }
+

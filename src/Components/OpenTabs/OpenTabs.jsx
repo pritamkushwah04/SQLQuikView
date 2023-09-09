@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import "./OpenTabs.css"
-const OpenTabs = (props) => {
+const OpenTabs = ({tables, setTables, activeTab, setActiveTab}) => {
 
     useEffect(() => {
-        props.tables.forEach(function (tableName) {
-            if (tableName === props.activeTab) {
+        tables.forEach(function (tableName) {
+            if (tableName === activeTab) {
                 const table = document.getElementById(tableName);
                 table.style.display = 'block';
             } else {
@@ -12,38 +12,38 @@ const OpenTabs = (props) => {
                 table.style.display = 'none';
             }
         });
-    }, [props.activeTab,props.tables]);
-
+    }, [activeTab, tables]);
 
     function activateTab(ele) {
-        const nevActiveTab=ele.target.innerHTML;
-        console.log(nevActiveTab);
-        props.setActiveTab(nevActiveTab);
+        const nevActiveTab = ele.target.innerText;
+        setActiveTab(nevActiveTab);
     }
-    
-    function closeTab(ele){
-           const divText = ele.target.parentNode.innerText.trim();
-           const parts = divText.split('\n');
-           const tabToClose= parts[0];
-           props.setTables((curTables)=>curTables.filter(table=>table !== tabToClose));
-           if(tabToClose===props.activeTab && props.tables.length){
-            props.tables[0]===props.activeTab?props.setActiveTab(props.tables[1]):props.setActiveTab(props.tables[0])
-           }
+
+    function closeTab(ele) {
+        const divText = ele.target.parentNode.innerText.trim();
+        const parts = divText.split('\n');
+        const tabToClose = parts[0];
+        setTables((curTables) => curTables.filter(table => table !== tabToClose));
+        if (tables[tables.length - 1] === tabToClose) {
+            setActiveTab(tables[tables.length - 2]);
+        } else {
+            setActiveTab(tables[tables.length - 1]);
         }
-    
+    }
+
     return (
         <div className='open-tabs' >
             {
-                props.tables.map((tableName) => {
-                    if (props.activeTab === tableName) {
+                tables.map((tableName) => {
+                    if (activeTab === tableName) {
                         return <div className='single-active-tab-container'>
-                            <div onClick={activateTab} className='active-tab'>{tableName}</div>
+                            <div onClick={activateTab} >{tableName}</div>
                             <div onClick={closeTab} className='active-cancel-btn'>X</div>
                         </div>
 
                     } else {
-                        return <div className='single-tab-container'>
-                            <div onClick={activateTab} className='tab'>{tableName}</div>
+                        return <div onClick={activateTab} className='single-tab-container'>
+                            <div  >{tableName}</div>
                             <div onClick={closeTab} className='cancel-btn'>X</div>
                         </div>
                     }

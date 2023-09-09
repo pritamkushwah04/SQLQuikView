@@ -1,14 +1,14 @@
 .container{
     width: 100%;
-    height: 100%;
-    background-color:#1e1e1e;
-
+    background-color: var(--bg-p-dark);
 }
 
 .inpute-box{
-    background-color: #1e1e1e;
-    width: 100vw; 
+    background-color: var(--bg-p-dark);
+    color: #f1c40f;
+    width: 100%; 
     height:100%;
+    font-size:larger;
     position:absolute;
     z-index: 0;
 }

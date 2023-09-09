@@ -1,0 +1,51 @@
+.drop-down-comp{
+    width: 100%;
+    background-color: var(--bg-s-dark);
+    color: var(--text-s-dark);
+    margin-top: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.s-container{
+}
+
+.Schema-title{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: small;
+    color: var(--text-s-dark);
+    display: flex;
+    justify-content: space-between;
+}
+.show-table-btn{
+    cursor: pointer;
+    background-color: var(--bg-hover-dark);
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 5%;
+}
+.s-table{
+     width: 100%;
+     background-color: var(--bg-s-dark);
+     color: var(--text-s-dark);
+}
+
+.s-table-h{
+    text-align: left;
+}
+
+.s-table,.s-table-h,.s-table-d{
+    border-collapse: collapse;
+    border: none;
+}
+
+.s-table-body{
+    height: 100px;
+    overflow: hidden;
+}
+.s-table-head{
+
+}
+.s-table-r{
+
+}

@@ -4,7 +4,8 @@ import './TableComponent.css'
 
 function TableComponent( props) {
     const [csvData, setCsvData] = useState([]);
-
+    const [totalRow,setTotalRow]=useState();
+    const [totalCol,setTotalCol]=useState();
     useEffect(() => {
         async function getData() {
             const response = await fetch(`/CSV/${props.tableName}.csv`)
@@ -20,31 +21,34 @@ function TableComponent( props) {
             }) // object with { data, errors, meta }
             const rows = results.data // array of objects
             setCsvData(rows)
+            setTotalRow(rows.length);
+            setTotalCol(Object.keys(rows[0]).length);
         }
         getData()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
-            <div  className="table-container">
-                <table id={props.tableName} className='table'>
-                    <thead className='table-row'>
-                        <tr >
+            <div  id={props.tableName} className="table-container">
+                <table  className='table'>
+                    <thead className='table-head'>
+                        <tr className='table-row' >
                             {csvData[0] && Object.keys(csvData[0]).map((header, index) => (
-                                <th  key={index}>{header}</th>
+                                <th  className='table-h' key={index}>{header}</th>
                             ))}
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='t-body'>
                         {csvData.map((row, rowIndex) => (
-                            <tr className='table-col' key={rowIndex}>
+                            <tr className='table-row' key={rowIndex}>
                                 {Object.values(row).map((value, columnIndex) => (
-                                    <td className='table-col' key={columnIndex}>{value}</td>
+                                    <td className='table-data' key={columnIndex}>{value}</td>
                                 ))}
                             </tr>
                         ))}
                     </tbody>
                 </table>
+                <div className='row-count'>row : {totalRow}, col:{totalCol}</div>
             </div>
     );
 }

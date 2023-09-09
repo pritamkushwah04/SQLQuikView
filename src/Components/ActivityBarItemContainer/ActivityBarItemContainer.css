@@ -1,35 +1,29 @@
 .ActivityBarItemContainer {
-    background-color: #1e1e1e;
+    background-color: var(--bg-p-dark);
     height: 250px;
     padding: 5px;
     border-bottom: 1px solid #3e3e42;
     overflow-y: scroll;
 }
 
-/* Hide the scrollbar */
 .ActivityBarItemContainer::-webkit-scrollbar {
     width: 0.1rem;
-    /* Adjust the width to your preference */
 }
 
-/* Optionally, you can style the scrollbar track */
 .ActivityBarItemContainer::-webkit-scrollbar-track {
     background-color: #1e1e1e;
 }
 
-/* Optionally, you can style the scrollbar thumb */
 .ActivityBarItemContainer::-webkit-scrollbar-thumb {
     background-color: #888;
 }
 
 .title {
-    color: rgb(133, 127, 127);
+    color: var(--text-p-dark);
     font-size: small;
     display: flex;
     justify-content: space-between;
 }
-
-.item-title {}
 
 .close-btn {
     cursor: pointer;
