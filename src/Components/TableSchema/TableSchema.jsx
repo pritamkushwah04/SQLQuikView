@@ -8,7 +8,7 @@ const TableSchema = ({ setTables, setActiveTab }) => {
     const [selectedTable, setSelectedTable] = useState("");
     const [tableDiv, setTableDiv] = useState(null);
     const [csvData, setCsvData] = useState([]);
-    const [filePaths, setFilePaths] = useState(["order_details", "orders"]);
+    const [filePaths, setFilePaths] = useState(["order_details", "orders","order_details_large"]);
     const parsedData = useMemo(() => {
         const data = [];
         for (let i = 0; i < filePaths.length; i++) {
