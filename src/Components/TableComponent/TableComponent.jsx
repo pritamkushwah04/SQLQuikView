@@ -48,8 +48,8 @@ function TableComponent({ activeTab }) {
         setTotalCol(Object.keys(rows[0]).length);
       }
       getData()
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeTab])
 
   // Define a custom cell renderer
