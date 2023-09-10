@@ -34,7 +34,7 @@ The average page load time for SQLQuickView is approximately [603] ms. Measured 
 
 **Lighthouse Performance Scores:**
 
-![Lighthouse Performance Scores](lighthouse-scores.png)
+![Lighthouse Performance Scores](Lighthouse Performance Report.png)
 
 ## Optimizations
 
