@@ -19,6 +19,7 @@ const DisplayContainer = ({ tables, setTables, activeTab, setActiveTab }) => {
       setDynamicComponent(<div id='empty-table-container' className='empty-table-container'>Open Table Or Simply Start Writting Query...</div>
       )
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tables,activeTab])
 
   return (

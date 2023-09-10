@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "./OpenTabs.css"
 const OpenTabs = ({tables, setTables, activeTab, setActiveTab}) => {
 

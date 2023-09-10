@@ -19,6 +19,7 @@ function TableComponent({ activeTab }) {
 
   useEffect(() => {
     if (activeTab) {
+      setFilePaths((prev)=>prev);
       const selectedFileIndex = filePaths.indexOf(activeTab);
       if (parsedData[selectedFileIndex]) {
         setCsvData(parsedData[selectedFileIndex])

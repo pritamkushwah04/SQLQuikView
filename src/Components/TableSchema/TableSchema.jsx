@@ -35,6 +35,7 @@ const TableSchema = ({ setTables, setActiveTab }) => {
         if (selectedTable) {
             const selectedFileIndex = filePaths.indexOf(selectedTable);
             if (parsedData[selectedFileIndex]) {
+                setFilePaths((prev)=>prev);
                 setCsvData(parsedData[selectedFileIndex])
                 return;
             }
