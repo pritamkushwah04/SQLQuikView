@@ -32,6 +32,8 @@ function IntroComponent() {
             <ul>
                 <li>/&lt;Popular query name&gt; (e.g., /SELECT) to quickly insert a popular query.</li>
                 <li>Press SHIFT+ENTER to run the query.</li>
+                <li>Also you can navigate through your recent queries using UP ARROWand DOWN ARROW</li>
+                
             </ul>
 
             <h2>8. Export to CSV</h2>
