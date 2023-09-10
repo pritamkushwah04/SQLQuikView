@@ -4,7 +4,12 @@
 
 SQLQuickView is a user-friendly SQL table management and querying tool designed to simplify the management of SQL databases. It provides an intuitive interface for interacting with your tables, executing queries, and exporting query results.
 
-[Intro Video](https://www.loom.com/embed/a2154055b0ef45928bf0d72554095e86?sid=9571ae58-5902-4b99-824d-cfb650f805ee)
+[![Alt Text](https://cdn.loom.com/sessions/thumbnails/a2154055b0ef45928bf0d72554095e86-1694370042137-with-play.gif)](https://www.loom.com/embed/a2154055b0ef45928bf0d72554095e86?sid=9571ae58-5902-4b99-824d-cfb650f805ee)
+
+Click the GIF to open WalkThrough Video
+
+
+
 
 ## Features
 
