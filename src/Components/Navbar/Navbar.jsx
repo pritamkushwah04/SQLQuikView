@@ -2,7 +2,7 @@ import React from 'react'
 import "./Navbar.css"
 
 const Navbar = ({ curActivityBarItem, setCurActivityBarItem, tables, setTables, activeTab, setActiveTab }) => {
-  const navItems = ["Open Table", "Recent Query", "Popular Query", "Import From CSV", "Export To CSV"];
+  const navItems = ["Open Table", "Recent Query", "Popular Query", "Export To CSV"];
 
   function addToActivityBar(ele) {
     const newItem = ele.target.innerText;

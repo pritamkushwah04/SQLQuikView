@@ -3,7 +3,7 @@ import './IntroComponent.css'
 function IntroComponent() {
     return (
         <div className="intro-page">
-            <h1>Welcome to Your SQL Application</h1>
+            <h1>Welcome to Your SQLQuickView</h1>
             <p>Follow these steps to get started:</p>
 
             <h2>1. Open a Table</h2>
