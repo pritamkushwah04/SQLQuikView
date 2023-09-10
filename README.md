@@ -1,34 +1,74 @@
 # SQLQuickView
 
-Welcome to SQLQuickView, your go-to SQL application for easy table management and querying! SQLQuickView provides a user-friendly interface to interact with your SQL databases effortlessly.
+## Overview
 
-## Introduction Video
-
-📺 [Watch the Introduction Video](https://your-video-link-here)
+SQLQuickView is a user-friendly SQL table management and querying tool designed to simplify the management of SQL databases. It provides an intuitive interface for interacting with your tables, executing queries, and exporting query results.
 
 ## Features
 
-- Open and manage your SQL tables with ease.
-- Execute SQL queries and view query results.
-- Quickly access popular queries and recent query history.
-- Export query results to CSV format.
-- And much more!
+SQLQuickView offers the following features tailored to meet the requirements of users:
 
-## Packages Used
+- **Schema View**: Easily explore the schema of selected tables.
 
-SQLQuickView uses the following packages to enhance its functionality:
+- **Export to CSV**: Export query results to CSV format for convenient data retrieval.
 
-1. [Package Name 1](https://link-to-package-1.com): Description of the package and how it's used in the project.
+- **Popular Query Options**: Access common queries with a single click.
 
-2. [Package Name 2](https://link-to-package-2.com): Description of the package and how it's used in the project.
+- **Recent Queries**: Keep track of and re-run your recently executed queries.
 
-3. [Package Name 3](https://link-to-package-3.com): Description of the package and how it's used in the project.
+- **TextArea Shortcuts**: Utilize shortcuts like `/SELECT` and `SHIFT+ENTER` for a streamlined querying experience.Also you can navigate through your recent queries using `UP ARROW`and `DOWN ARROW`
 
-## Getting Started
+## Technology Stack
 
-To get started with SQLQuickView, follow these steps:
+SQLQuickView is built using the following technologies:
 
-1. Clone the repository:
+- JavaScript Library: [React.js]
+- Major Plugins/Packages: [[react-split-pane](https://www.npmjs.com/package/split-pane-react), [React-vertualised](https://www.npmjs.com/package/react-virtualized), [papaparse](https://www.npmjs.com/package/papaparse)]
+- Frontend: [Custom CSS]
+- Hosted On: [Netlify]
 
-   ```bash
-   git clone https://github.com/your-username/SQLQuickView.git
+## Performance
+
+**Page Load Time:**
+The average page load time for SQLQuickView is approximately [603] ms. Measured this time using [[GTMetrix](https://gtmetrix.com/)]
+
+**Lighthouse Performance Scores:**
+
+![Lighthouse Performance Scores](lighthouse-scores.png)
+
+## Optimizations
+
+To enhance the performance and decrease the load time of SQLQuickView, we have implemented the following optimizations:
+
+- **Code Splitting**: Employed code splitting techniques to split our JavaScript bundle into smaller chunks, improving initial load times.
+
+- **Lazy Loading**: Table component lazy-loaded to reduce the initial load time.
+
+- **Caching Strategies**: Cached the parsedData using the useMemo Hook.
+
+- **ReactVirtualised**: Used React-virtualized to render the table optimally by only rendering the visible rows in the window.
+
+
+## Handling Large Data Sets
+
+SQLQuickView is designed to efficiently handle large data sets (tested up to 1,00,000 cells) without overloading the browser or causing crashes. Our optimized data fetching and rendering strategies ensure a smooth user experience, even when working with extensive data.
+
+## Brownie Points
+
+SQLQuickView takes pride in its ability to render a large amount of rows without breaking the browser or causing crashes. The performance optimizations and efficient data handling techniques make working with extensive data a breeze.
+
+---
+
+**Get Started:**
+
+For detailed instructions on getting started with SQLQuickView, please refer to the [Getting Started](#) section in our documentation.
+
+**Contributing:**
+
+We welcome contributions! If you'd like to contribute to SQLQuickView, please read our [Contributing Guidelines](CONTRIBUTING.md).
+
+**License:**
+
+SQLQuickView is open-source software released under the [MIT License](LICENSE.md).
+
+Enjoy using SQLQuickView and maximize your SQL productivity!
