@@ -1,59 +1,47 @@
 .table-container {
+    padding-top: 20px;
     height: 75vh;
     width: 100%;
-    overflow: auto;
     background-color: var(--bg-s-dark);
     color: var(--text-s-dark);
+    position: relative;
+}
+.grid-column-cell{
+    position: absolute;
+    z-index: 2;
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: normal;
-}
-
-.table-head{
-    /* background-color: #252526; */
-}
-.table-h {
-    /* background-color: darkgrey; */
-    padding-top: 28px;
-    color: #007acc;
-    font-weight: normal;
-    text-align: left;
-}
-
-.table-d {
-    text-align: left;
-    color: darkgray;
-}
-
-tr:nth-child(even) {
-    background-color: #2d2d30;
-}
-  
 .row-count{
     background-color: var(--bg-p-dark);
     color: var(--text-s-dark);
     position: absolute;
     top: 0;
     right: 10px;
+    z-index: 2;
+} 
+
+.grid-column-cell{
+    color: #007aac;
 }
-  
-  
-  
-/* Hide the scrollbar */
-.table-container::-webkit-scrollbar {
+.grid-even-row{
+    overflow: hidden;
+    background-color: var(--bg-hover-dark);
+}
+.grid-odd-row{
+    overflow: hidden;
+}
+
+.grid-c::-webkit-scrollbar {
     width: 0.5rem;
-    /* Adjust the width to your preference */
+    cursor: pointer;
 }
 
-/* Optionally, you can style the scrollbar track */
-.table-container::-webkit-scrollbar-track {
+.grid-c::-webkit-scrollbar-track {
     background-color: #1e1e1e;
+    cursor: pointer;
 }
 
-/* Optionally, you can style the scrollbar thumb */
-.table-container::-webkit-scrollbar-thumb {
+.grid-c::-webkit-scrollbar-thumb {
     background-color: #888;
+    cursor: pointer;
 }

@@ -6,6 +6,7 @@
     display: flex;
     justify-content: flex-end;
     flex-flow: row-reverse;
+    z-index: 1;
 }
 
 .single-tab-container{
@@ -21,7 +22,7 @@
     flex-shrink: 1;
     padding-left: 20px;
     padding-right: 8px;
-    background-color: #252526;
+    background-color: var(--bg-s-dark);
     border-top-left-radius: 5%;
     border-top-right-radius: 5%; 
     border-top: 2px solid #007aac;

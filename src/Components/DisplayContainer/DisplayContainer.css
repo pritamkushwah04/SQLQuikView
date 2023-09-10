@@ -2,8 +2,6 @@
     background-color: #2d2d30;
     height: 75vh;
     width: 100%;
-    overflow-y: auto;
-    overflow-x: auto; 
 }
 .empty-table-container{
     width: 100%;
@@ -16,4 +14,5 @@
 .tables{
     display: flex;
     width: 100%;
+    position: relative;
 }

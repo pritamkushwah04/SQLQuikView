@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useMemo} from 'react'
 import { useState } from 'react'
 import Papa from 'papaparse';
 
@@ -8,8 +8,14 @@ const TableSchema = ({ setTables, setActiveTab }) => {
     const [selectedTable, setSelectedTable] = useState("");
     const [tableDiv, setTableDiv] = useState(null);
     const [csvData, setCsvData] = useState([]);
-
-    const tableList = ["order_details", "orders"];
+    const [filePaths, setFilePaths] = useState(["order_details", "orders"]);
+    const parsedData = useMemo(() => {
+        const data = [];
+        for (let i = 0; i < filePaths.length; i++) {
+            data[i] = null; // Initialize data array with null values
+        }
+        return data;
+    }, [filePaths]);
 
     const handleTableChange = (event) => {
         setSelectedTable(event.target.value);
@@ -27,7 +33,13 @@ const TableSchema = ({ setTables, setActiveTab }) => {
 
     useEffect(() => {
         if (selectedTable) {
+            const selectedFileIndex = filePaths.indexOf(selectedTable);
+            if (parsedData[selectedFileIndex]) {
+                setCsvData(parsedData[selectedFileIndex])
+                return;
+            }
             async function getData() {
+                console.log("firse bulaya");
                 const response = await fetch(`/CSV/${selectedTable}.csv`)
                 const reader = response.body.getReader()
                 const result = await reader.read() // raw array
@@ -40,6 +52,9 @@ const TableSchema = ({ setTables, setActiveTab }) => {
                     delimiter: ',', // Specify the delimiter as a comma (or the correct delimiter used in your CSV)
                 }) // object with { data, errors, meta }
                 const rows = results.data // array of objects
+                const updatedData = [...parsedData];
+                updatedData[selectedFileIndex] = rows;
+                parsedData[selectedFileIndex] = rows;
                 setCsvData(rows)
             }
             getData(csvData);
@@ -87,7 +102,7 @@ const TableSchema = ({ setTables, setActiveTab }) => {
             <select className='drop-down-comp' value={selectedTable} onChange={handleTableChange}>
                 <option value="">Select a Table</option>
                 {
-                    tableList.map((tableName) => {
+                    filePaths.map((tableName) => {
                         return <option value={tableName}>{tableName}</option>
                     })
                 }

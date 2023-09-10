@@ -2,17 +2,17 @@ import React, { useEffect } from 'react'
 import "./OpenTabs.css"
 const OpenTabs = ({tables, setTables, activeTab, setActiveTab}) => {
 
-    useEffect(() => {
-        tables.forEach(function (tableName) {
-            if (tableName === activeTab) {
-                const table = document.getElementById(tableName);
-                table.style.display = 'block';
-            } else {
-                const table = document.getElementById(tableName);
-                table.style.display = 'none';
-            }
-        });
-    }, [activeTab, tables]);
+    // useEffect(() => {
+    //     tables.forEach(function (tableName) {
+    //         if (tableName === activeTab) {
+    //             const table = document.getElementById(tableName);
+    //             table.style.display = 'block';
+    //         } else {
+    //             const table = document.getElementById(tableName);
+    //             table.style.display = 'none';
+    //         }
+    //     });
+    // }, [activeTab, tables]);
 
     function activateTab(ele) {
         const nevActiveTab = ele.target.innerText;

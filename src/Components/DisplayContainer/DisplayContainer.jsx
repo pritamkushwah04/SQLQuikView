@@ -1,29 +1,30 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, lazy, Suspense, useState } from 'react'
 import './DisplayContainer.css'
-
-import TableComponent from '../TableComponent/TableComponent'
 import OpenTabs from '../OpenTabs/OpenTabs'
+
+const LazyTableComponent = lazy(() => import('../TableComponent/TableComponent'));
+// import TableComponent from '../TableComponent/TableComponent'
 const DisplayContainer = ({ tables, setTables, activeTab, setActiveTab }) => {
-  
-  useEffect(()=>{
-    const ele= document.getElementById("empty-table-container");
-    if(tables.length){
-      ele.style.display="none";
-    }else{
-      ele.style.display="block";
+  const [dynamicComponent, setDynamicComponent] = useState();
+  useEffect(() => {
+    if (tables.length) {
+      setDynamicComponent(
+        <div className='tables'>
+          <OpenTabs tables={tables} setTables={setTables} activeTab={activeTab} setActiveTab={setActiveTab} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyTableComponent activeTab={activeTab} />
+          </Suspense></div>
+      )
+    } else {
+      setDynamicComponent(<div id='empty-table-container' className='empty-table-container'>Open Table Or Simply Start Writting Query...</div>
+      )
     }
-  },[tables])
+  }, [tables,activeTab])
 
   return (
     <>
       <div className='display-container'>
-        <OpenTabs tables={tables} setTables={setTables} activeTab={activeTab} setActiveTab={setActiveTab} />
-        <div className='tables'>
-          {tables.map((tableName) => {
-            return <TableComponent tableName={tableName} />
-          })}
-        </div>
-        <div id='empty-table-container' className='empty-table-container'>Open Table Or Simply Start Writting Query...</div>
+        {dynamicComponent}
       </div>
     </>
   )
