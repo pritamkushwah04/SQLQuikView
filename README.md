@@ -57,18 +57,3 @@ SQLQuickView is designed to efficiently handle large data sets (tested up to 1,0
 
 SQLQuickView takes pride in its ability to render a large amount of rows without breaking the browser or causing crashes. The performance optimizations and efficient data handling techniques make working with extensive data a breeze.
 
----
-
-**Get Started:**
-
-For detailed instructions on getting started with SQLQuickView, please refer to the [Getting Started](#) section in our documentation.
-
-**Contributing:**
-
-We welcome contributions! If you'd like to contribute to SQLQuickView, please read our [Contributing Guidelines](CONTRIBUTING.md).
-
-**License:**
-
-SQLQuickView is open-source software released under the [MIT License](LICENSE.md).
-
-Enjoy using SQLQuickView and maximize your SQL productivity!
