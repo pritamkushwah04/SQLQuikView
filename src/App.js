@@ -20,7 +20,7 @@ function App() {
     <div className='App'>
       <SideBar tables={tables} setTables={setTables} activeTab={activeTab} setActiveTab={setActiveTab} selectedQuery={selectedQuery} setSelectedQuery={setSelectedQuery} recentQuery={recentQuery} setRecentQuery={setRecentQuery}></SideBar>
       <div style={{ height:'100vh', width:'100%'}}>
-        <SplitPane split='horizontal' sizes={sizes} onChange={setSizes}>
+        <SplitPane split='horizontal' sizes={sizes} onChange={setSizes} allowResize={false}>
           <Pane minSize={50} maxSize='100%'>
               <DisplayContainer tables={tables} setTables={setTables} activeTab={activeTab} setActiveTab={setActiveTab} />
           </Pane >

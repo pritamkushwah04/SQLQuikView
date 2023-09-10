@@ -22,26 +22,29 @@ const QueryInputBox = ({ setTables, setActiveTab, selectedQuery, setSelectedQuer
   useEffect(() => {
     const textarea = document.getElementById("inpute-box");
     let currentIndex = recentQuery.length - 1;
-    textarea.addEventListener("keydown", function (event) {
-      console.log("eventListner called");
+    const handleKeyDown = (event) => {
       if (event.key === "ArrowUp") {
-        // Prevent the default behavior of the arrow key (e.g., moving the cursor up)
         event.preventDefault();
-        // Move to the previous item circularly
         currentIndex = (currentIndex - 1 + recentQuery.length) % recentQuery.length;
-        // Update the textarea value with the current item
         if (currentIndex > -1)
           textarea.value = recentQuery[currentIndex];
       } else if (event.key === "ArrowDown") {
-        // Prevent the default behavior of the arrow key (e.g., moving the cursor up)
         event.preventDefault();
-        // Move to the previous item circularly
         currentIndex = (currentIndex + 1 + recentQuery.length) % recentQuery.length;
-        // Update the textarea value with the current item
         if (currentIndex > -1)
           textarea.value = recentQuery[currentIndex];
+      } else if (event.key === 'Enter' && event.shiftKey) {
+        addResultTable();
       }
-    });
+    };
+
+    textarea.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      // Remove the same event listener when the component unmounts
+      textarea.removeEventListener("keydown", handleKeyDown);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recentQuery])
 
   useEffect(() => {
@@ -67,8 +70,6 @@ const QueryInputBox = ({ setTables, setActiveTab, selectedQuery, setSelectedQuer
       setActiveTab(newResultTable);
     }
   }
-
-
 
   return (
     <div className='container'>

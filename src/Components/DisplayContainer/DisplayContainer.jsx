@@ -1,7 +1,7 @@
 import React, { useEffect, lazy, Suspense, useState } from 'react'
 import './DisplayContainer.css'
 import OpenTabs from '../OpenTabs/OpenTabs'
-
+import IntroComponent from '../IntroComponent/IntroComponent';
 const LazyTableComponent = lazy(() => import('../TableComponent/TableComponent'));
 // import TableComponent from '../TableComponent/TableComponent'
 const DisplayContainer = ({ tables, setTables, activeTab, setActiveTab }) => {
@@ -16,7 +16,7 @@ const DisplayContainer = ({ tables, setTables, activeTab, setActiveTab }) => {
           </Suspense></div>
       )
     } else {
-      setDynamicComponent(<div id='empty-table-container' className='empty-table-container'>Open Table Or Simply Start Writting Query...</div>
+      setDynamicComponent(<div id='empty-table-container'  className='empty-table-container'><IntroComponent/></div>
       )
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps

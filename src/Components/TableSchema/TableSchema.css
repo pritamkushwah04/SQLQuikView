@@ -5,6 +5,11 @@
     margin-top: 8px;
     padding-top: 4px;
     padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.drop-down-options{
+    cursor: pointer;
 }
 .s-container{
 }

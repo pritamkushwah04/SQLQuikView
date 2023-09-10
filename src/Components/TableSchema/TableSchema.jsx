@@ -101,10 +101,10 @@ const TableSchema = ({ setTables, setActiveTab }) => {
     return (
         <div className='s-container'>
             <select className='drop-down-comp' value={selectedTable} onChange={handleTableChange}>
-                <option value="">Select a Table</option>
+                <option  value="">Select a Table</option>
                 {
                     filePaths.map((tableName) => {
-                        return <option value={tableName}>{tableName}</option>
+                        return <option  value={tableName}>{tableName}</option>
                     })
                 }
             </select>

@@ -1,6 +1,6 @@
 .table-container {
     padding-top: 20px;
-    height: 75vh;
+    height: var(--table-h);
     width: 100%;
     background-color: var(--bg-s-dark);
     color: var(--text-s-dark);
