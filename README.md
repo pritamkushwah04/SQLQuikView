@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# SQLQuickView
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+SQLQuickView is a user-friendly SQL table management and querying tool designed to simplify the management of SQL databases. It provides an intuitive interface for interacting with your tables, executing queries, and exporting query results.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+SQLQuickView offers the following features tailored to meet the requirements of users:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Schema View**: Easily explore the schema of selected tables.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Export to CSV**: Export query results to CSV format for convenient data retrieval.
 
-### `npm test`
+- **Popular Query Options**: Access common queries with a single click.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Recent Queries**: Keep track of and re-run your recently executed queries.
 
-### `npm run build`
+- **TextArea Shortcuts**: Utilize shortcuts like `/SELECT` and `SHIFT+ENTER` for a streamlined querying experience.Also you can navigate through your recent queries using `UP ARROW`and `DOWN ARROW`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technology Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+SQLQuickView is built using the following technologies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- JavaScript Library: [React.js]
+- Major Plugins/Packages: [[react-split-pane](https://www.npmjs.com/package/split-pane-react), [React-vertualised](https://www.npmjs.com/package/react-virtualized), [papaparse](https://www.npmjs.com/package/papaparse)]
+- Frontend: [Custom CSS]
+- Hosted On: [Netlify]
 
-### `npm run eject`
+## Performance
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Page Load Time:**
+The average page load time for SQLQuickView is approximately [603] ms. Measured this time using [[GTMetrix](https://gtmetrix.com/)]
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Lighthouse Performance Scores:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Lighthouse Performance Scores](Lighthouse Performance Report.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Optimizations
 
-## Learn More
+To enhance the performance and decrease the load time of SQLQuickView, we have implemented the following optimizations:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Code Splitting**: Employed code splitting techniques to split our JavaScript bundle into smaller chunks, improving initial load times.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Lazy Loading**: Table component lazy-loaded to reduce the initial load time.
 
-### Code Splitting
+- **Caching Strategies**: Cached the parsedData using the useMemo Hook.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **ReactVirtualised**: Used React-virtualized to render the table optimally by only rendering the visible rows in the window.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Handling Large Data Sets
 
-### Making a Progressive Web App
+SQLQuickView is designed to efficiently handle large data sets (tested up to 1,00,000 cells) without overloading the browser or causing crashes. Our optimized data fetching and rendering strategies ensure a smooth user experience, even when working with extensive data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Brownie Points
 
-### Advanced Configuration
+SQLQuickView takes pride in its ability to render a large amount of rows without breaking the browser or causing crashes. The performance optimizations and efficient data handling techniques make working with extensive data a breeze.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+**Get Started:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+For detailed instructions on getting started with SQLQuickView, please refer to the [Getting Started](#) section in our documentation.
 
-### `npm run build` fails to minify
+**Contributing:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We welcome contributions! If you'd like to contribute to SQLQuickView, please read our [Contributing Guidelines](CONTRIBUTING.md).
+
+**License:**
+
+SQLQuickView is open-source software released under the [MIT License](LICENSE.md).
+
+Enjoy using SQLQuickView and maximize your SQL productivity!
