@@ -4,6 +4,13 @@
 
 SQLQuickView is a user-friendly SQL table management and querying tool designed to simplify the management of SQL databases. It provides an intuitive interface for interacting with your tables, executing queries, and exporting query results.
 
+[![Alt Text](https://cdn.loom.com/sessions/thumbnails/a2154055b0ef45928bf0d72554095e86-1694370042137-with-play.gif)](https://www.loom.com/embed/a2154055b0ef45928bf0d72554095e86?sid=9571ae58-5902-4b99-824d-cfb650f805ee)
+
+Click the GIF to open WalkThrough Video
+
+
+
+
 ## Features
 
 SQLQuickView offers the following features tailored to meet the requirements of users:
@@ -33,8 +40,8 @@ SQLQuickView is built using the following technologies:
 The average page load time for SQLQuickView is approximately [603] ms. Measured this time using [[GTMetrix](https://gtmetrix.com/)]
 
 **Lighthouse Performance Scores:**
+![Lighthouse Performance Report](https://raw.githubusercontent.com/pritamkushwah04/SQLQuikView/master/public/Image/Lighthouse%20Performance%20Report.png)
 
-![Lighthouse Performance Scores](Lighthouse Performance Report.png)
 
 ## Optimizations
 
@@ -57,18 +64,3 @@ SQLQuickView is designed to efficiently handle large data sets (tested up to 1,0
 
 SQLQuickView takes pride in its ability to render a large amount of rows without breaking the browser or causing crashes. The performance optimizations and efficient data handling techniques make working with extensive data a breeze.
 
----
-
-**Get Started:**
-
-For detailed instructions on getting started with SQLQuickView, please refer to the [Getting Started](#) section in our documentation.
-
-**Contributing:**
-
-We welcome contributions! If you'd like to contribute to SQLQuickView, please read our [Contributing Guidelines](CONTRIBUTING.md).
-
-**License:**
-
-SQLQuickView is open-source software released under the [MIT License](LICENSE.md).
-
-Enjoy using SQLQuickView and maximize your SQL productivity!
