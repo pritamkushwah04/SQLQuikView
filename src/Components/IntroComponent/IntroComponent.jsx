@@ -4,7 +4,7 @@ function IntroComponent() {
     return (
         <div className="intro-page">
             <h1>Welcome to Your SQLQuickView</h1>
-            <p>Follow these steps to get started: <a href="https://www.loom.com/embed/a2154055b0ef45928bf0d72554095e86?sid=9571ae58-5902-4b99-824d-cfb650f805ee" target="_blank">Or Better Click Here Watch Intro Video</a></p>
+            <p>Follow these steps to get started: <a href="https://www.loom.com/embed/a2154055b0ef45928bf0d72554095e86?sid=9571ae58-5902-4b99-824d-cfb650f805ee" target="_blank"  rel="noreferrer">Or Better Click Here Watch Intro Video</a></p>
 
             <h2>1. Open a Table</h2>
             <p>Click on "Open Table" from the navbar to begin.</p>
