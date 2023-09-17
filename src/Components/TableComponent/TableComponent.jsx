@@ -8,7 +8,7 @@ function TableComponent({ activeTab }) {
   const [csvData, setCsvData] = useState([]);
   const [totalRow, setTotalRow] = useState(0);
   const [totalCol, setTotalCol] = useState(0);
-  const [filePaths, setFilePaths] = useState(["order_details", "orders", "result0", "result1", "result2"]);
+  const [filePaths] = useState(["order_details", "orders","order_details_large", "result0", "result1", "result2"]);
   const parsedData = useMemo(() => {
     const data = [];
     for (let i = 0; i < filePaths.length; i++) {
@@ -19,7 +19,6 @@ function TableComponent({ activeTab }) {
 
   useEffect(() => {
     if (activeTab) {
-      setFilePaths((prev)=>prev);
       const selectedFileIndex = filePaths.indexOf(activeTab);
       if (parsedData[selectedFileIndex]) {
         setCsvData(parsedData[selectedFileIndex])
@@ -29,8 +28,13 @@ function TableComponent({ activeTab }) {
       }
       async function getData() {
         const response = await fetch(`/CSV/${activeTab}.csv`)
+        if (!response.ok) {
+          throw new Error(`Failed to fetch CSV: ${response.status} ${response.statusText}`);
+        }
         const reader = response.body.getReader()
+        
         const result = await reader.read() // raw array
+        console.log("result:-",result); 
         const decoder = new TextDecoder('utf-8')
         const csv = decoder.decode(result.value) // the csv text
         const results = Papa.parse(csv, {
