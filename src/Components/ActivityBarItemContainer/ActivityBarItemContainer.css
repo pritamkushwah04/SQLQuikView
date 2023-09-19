@@ -20,7 +20,7 @@
 
 .title {
     color: var(--text-p-dark);
-    font-size: small;
+    font-size: large;
     display: flex;
     justify-content: space-between;
 }

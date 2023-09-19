@@ -1,5 +1,5 @@
 nav{
-    width: 60px;
+    width: 100px;
     background-color: var(--bg-p-dark);
     color: var(--text-p-dark);
     font-size: normal;
@@ -8,12 +8,17 @@ nav{
 }
 .nav-item{
     border-radius: 5%;
-    padding: 6px;
+    padding: 16px;
     cursor: pointer;
+    text-align: center;
 }
-
+.nav-item-icons{
+    height: 40px;
+    width: 40px;
+}
 .nav-item:hover{
     background-color: var(--bg-hover-dark);
+    border: 1px solid #9b59b6;
 }
 .all-table-list{
     background-color: #2d2d30;

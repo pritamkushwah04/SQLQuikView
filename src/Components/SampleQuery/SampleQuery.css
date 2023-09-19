@@ -1,7 +1,7 @@
 .query{
     padding: 6px;
-    border-radius: 2%;
-    font-size: small;
+    border-radius: 5%;
+    font-size: normal;
     color: var(--text-s-dark);
 
 }
@@ -9,6 +9,7 @@
 .query:hover{
     background-color: var(--bg-hover-dark);
     color: var(--text-s-dark);
+    border: 1px solid #9b59b6;
 }
 
 .query-code{

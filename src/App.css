@@ -1,15 +1,23 @@
 :root {
   --bg-color-light: #ffffff; /* Light theme background color */
-  --bg-p-dark:#181818;
-  --bg-s-dark:#212121;
-  --bg-hover-dark:#3D3D3D;
+  /* --bg-p-dark:#181818; */
+  /* --bg-p-dark:#131231; */
+  --bg-p-dark:#0d0c1f;
+  
+  /* --bg-s-dark:#212121; */
+  --bg-s-dark:#100f27;
+  /* --bg-hover-dark:#3D3D3D; */
+  --bg-hover-dark:#270e41;
+  /* --bg-hover-dark:#20083a; */
   --text-p-dark:#ffffff;
   --text-s-dark:#aaaaaa;
+  
 
   --table-h:74vh;
 }
 
 .App {
   display: flex;
-  background-color: #2d2d30;
+  background-color: #100f27;
+  /* background-color: #2d2d30; */
 }

@@ -15,7 +15,7 @@ const SampleQuery = ({ setSelectedQuery, recentQuery, ActivityBarItem, setTables
             <div className='query-code' onClick={addToSelectedQuery}>{query}</div></div>
         }))
       } else {
-        setDynamicDiv(<div className='recent-query-empty'>Empty</div>)
+        setDynamicDiv(<div className='recent-query-empty'>Your last executed Queries will be shown here</div>)
       }
     } else if (ActivityBarItem === "Popular Query") {
       setDynamicDiv(populareQuery.map((query) => {

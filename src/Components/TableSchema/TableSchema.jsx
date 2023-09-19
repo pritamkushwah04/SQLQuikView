@@ -82,10 +82,7 @@ const TableSchema = ({ setTables, setActiveTab }) => {
     // })
     
     useEffect(() => {
-        console.log("use effect called");
-        console.log("columnNames", columnNames);
         if (columnNames) {
-            console.log("inside if:-",columnNames);
             const newDiv = <div>
                 <div className='Schema-title'>
                     <div >SCHEMA :- </div>

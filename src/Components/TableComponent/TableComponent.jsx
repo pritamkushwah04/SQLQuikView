@@ -34,7 +34,6 @@ function TableComponent({ activeTab }) {
         const reader = response.body.getReader()
         
         const result = await reader.read() // raw array
-        console.log("result:-",result); 
         const decoder = new TextDecoder('utf-8')
         const csv = decoder.decode(result.value) // the csv text
         const results = Papa.parse(csv, {

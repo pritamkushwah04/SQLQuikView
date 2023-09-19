@@ -7,9 +7,11 @@
     justify-content: flex-end;
     flex-flow: row-reverse;
     z-index: 1;
+    font-size: large;
 }
 
 .single-tab-container{
+    padding: 10px;
     flex-shrink: 1;
     display: flex;
     padding-inline: 20px;
@@ -19,6 +21,7 @@
 }
 
 .single-active-tab-container{
+    padding: 10px;
     flex-shrink: 1;
     padding-left: 20px;
     padding-right: 8px;

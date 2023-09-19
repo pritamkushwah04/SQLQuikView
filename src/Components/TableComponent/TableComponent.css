@@ -1,5 +1,5 @@
 .table-container {
-    padding-top: 20px;
+    padding-top: 50px;
     height: var(--table-h);
     width: 100%;
     background-color: var(--bg-s-dark);
@@ -25,7 +25,7 @@
 }
 .grid-even-row{
     overflow: hidden;
-    background-color: var(--bg-hover-dark);
+    background-color: #131231;
 }
 .grid-odd-row{
     overflow: hidden;
