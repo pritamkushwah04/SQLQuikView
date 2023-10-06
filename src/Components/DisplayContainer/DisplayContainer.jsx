@@ -2,7 +2,8 @@ import React, { useEffect, lazy, Suspense, useState } from 'react'
 import './DisplayContainer.css'
 import OpenTabs from '../OpenTabs/OpenTabs'
 import IntroComponent from '../IntroComponent/IntroComponent';
-const LazyTableComponent = lazy(() => import('../TableComponent/TableComponent'));
+// const LazyTableComponent = lazy(() => import('../TableComponent/TableComponent'));
+const LazyTableComponentPaged = lazy(() => import('../TableComponentPaged/TableComponentPaged'));
 // import TableComponent from '../TableComponent/TableComponent'
 const DisplayContainer = ({ tables, setTables, activeTab, setActiveTab }) => {
   const [dynamicComponent, setDynamicComponent] = useState();
@@ -12,7 +13,8 @@ const DisplayContainer = ({ tables, setTables, activeTab, setActiveTab }) => {
         <div className='tables'>
           <OpenTabs tables={tables} setTables={setTables} activeTab={activeTab} setActiveTab={setActiveTab} />
           <Suspense fallback={<div>Loading...</div>}>
-            <LazyTableComponent activeTab={activeTab} />
+            {/* <LazyTableComponent activeTab={activeTab} /> */}
+            <LazyTableComponentPaged activeTab={activeTab} />
           </Suspense></div>
       )
     } else {
