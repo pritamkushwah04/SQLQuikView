@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Papa from 'papaparse';
 import './TableComponentPaged.css'
-import ReactPaginate from "https://cdn.skypack.dev/react-paginate@7.1.3";
+import ReactPaginate from 'react-paginate';
+// import ReactPaginate from "https://cdn.skypack.dev/react-paginate@7.1.3";
 
 const itemsPerPage = 50;
 
