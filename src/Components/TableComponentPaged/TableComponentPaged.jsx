@@ -4,9 +4,9 @@ import './TableComponentPaged.css'
 import ReactPaginate from 'react-paginate';
 // import ReactPaginate from "https://cdn.skypack.dev/react-paginate@7.1.3";
 
-const itemsPerPage = 50;
 
 function TableComponentPaged({ activeTab }) {
+  const [itemsPerPage, setItemsPerPage] = useState(100);
   const [csvData, setCsvData] = useState([]);
   const [totalRow, setTotalRow] = useState(0);
   const [totalCol, setTotalCol] = useState(0);
@@ -19,6 +19,7 @@ function TableComponentPaged({ activeTab }) {
     return data;
   }, [filePaths]);
 
+  
 
   useEffect(() => {
     if (activeTab) {
@@ -55,10 +56,6 @@ function TableComponentPaged({ activeTab }) {
       }
       getData()
     }
-    setCurrentItems(null)
-    setPageCount(0)
-    setItemOffset(0)
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeTab])
 
@@ -68,17 +65,24 @@ function TableComponentPaged({ activeTab }) {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
 
-  useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(csvData.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(csvData.length / itemsPerPage));
-  }, [itemOffset, csvData,activeTab]);
+ 
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = event.selected * itemsPerPage % csvData.length;
     setItemOffset(newOffset);
   };
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(csvData.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(csvData.length / itemsPerPage));
+  }, [itemOffset, csvData, activeTab, itemsPerPage]);
+
+  //
+  function handleItemsPerPageChange(event) {
+    setItemsPerPage(Number(event.target.value));
+  }
 
   return (
     <div id={activeTab} className="table-container">
@@ -101,6 +105,15 @@ function TableComponentPaged({ activeTab }) {
         </tbody>
       </table>
       <div className='pagination-container'>
+        <div className='selectWrapper'>
+        <select className='drop-down-pagecount' value={itemsPerPage} onChange={handleItemsPerPageChange}>
+          <option value={20}>20 / page</option>
+          <option value={50}>50 / page</option>
+          <option value={100}>100 / page</option>
+          <option value={200}>200 / page</option>
+        </select>
+        
+        </div>
         <ReactPaginate
           nextLabel=" > "
           onPageChange={handlePageClick}
