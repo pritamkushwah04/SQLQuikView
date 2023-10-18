@@ -23,7 +23,7 @@ SQLQuickView offers the following features tailored to meet the requirements of 
 SQLQuickView is built using the following technologies:
 
 - JavaScript Library: [React.js]
-- Major Plugins/Packages: [[react-split-pane](https://www.npmjs.com/package/split-pane-react), [React-vertualised](https://www.npmjs.com/package/react-virtualized), [papaparse](https://www.npmjs.com/package/papaparse)]
+- Major Plugins/Packages: [[react-split-pane](https://www.npmjs.com/package/split-pane-react), [React-vertualised](https://www.npmjs.com/package/react-virtualized), [papaparse](https://www.npmjs.com/package/papaparse), [react-paginate](https://www.npmjs.com/package/react-paginate)]
 - Frontend: [Custom CSS]
 - Hosted On: [Netlify]
 
